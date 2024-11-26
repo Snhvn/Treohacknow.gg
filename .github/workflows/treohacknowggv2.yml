@@ -18,8 +18,7 @@ jobs:
          echo "IP 👇"
          tailscale ip -4 
          echo "nhớ kết nổi vs port 5900 (vnc) nha"
-      - name: cài đặt ubuntu
+      - name: cài đặt chrome
         run: |
           echo " Thiết Lập Ubuntu Kích Hoạt TuNoiDongXanhThomHuonglua"
-          docker pull tekfik/chrome
-          docker-run --name chrome --privileged -p 5900:5900 -d tekfik/chrome
+          docker run -p 5900:5900 tekfik/chrome
