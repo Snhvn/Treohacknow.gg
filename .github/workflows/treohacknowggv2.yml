@@ -21,5 +21,8 @@ jobs:
       - name: cài đặt chrome
         run: |
           echo " Thiết Lập Ubuntu Kích Hoạt TuNoiDongXanhThomHuonglua"
+          sudo apt update
+          sudo apt install nginx
+          sudo nginx
           sudo apt -y install novnc python3-websockify python3-numpy websockify -D --web=/usr/share/novnc/ 6080 localhost:5900
           docker run -p 5900:5900 tekfik/chrome
